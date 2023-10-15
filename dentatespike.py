@@ -688,7 +688,7 @@ class analysis():
     
     def DSperRelDelta(rel_delta_power, n_DSs, PSD_all, bin_ranges):
         """Computes the number of DSs, medians and quartiles per time bin of
-        weak ans strong delta waves.
+        weak and strong delta waves.
         
         Parameters
         ----------
@@ -784,7 +784,7 @@ class detection():
             event (in milliseconds).
         DS_waveforms_ : ndarray
             Waveforms of the detected events before the peak offset correction
-            is applied. If If offsetRange is None, DS_waveforms_ will be equal
+            is applied. If offsetRange is None, DS_waveforms_ will be equal
             to DS_waveforms.
         """
         import numpy as np
@@ -949,7 +949,7 @@ class classification():
                 mainsink[ci] = np.argmin(meancsd[:np.argmax(meancsd)])          # main sink before main source
 
         order      = np.argsort(mainsink) # order of the indexes of the main current sinks (DS1 before DS2)
-        class_prob = dsClassProb[:,order] # class probabilities matrix in the righ order (DS1 before DS2)
+        class_prob = dsClassProb[:,order] # class probabilities matrix in the right order (DS1 before DS2)
         
         DS_classes = np.argmax(class_prob,axis=1)               # DS classes (0 -> DS1, 1 -> DS2)
         DS1_ind    = DS_indexes[(DS_classes*-1+1).astype(bool)] # DS1 indexes
