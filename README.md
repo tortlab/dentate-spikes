@@ -6,7 +6,7 @@ Santiago, R. M., Lopes-dos-Santos, V., Jones, E. A. A., Huang, Y., Dupret, D., &
 
 The Python code is available at "dentatespike.py".
 
-To use it, place it in the same directory as your Jupyter notebook or simply map it using:
+To use it, place it in the same directory as your Jupyter Notebook or simply map it using:
 ```sh
 import sys
 sys.path.append('/path') # replace 'path' with the directory where the file is located.
